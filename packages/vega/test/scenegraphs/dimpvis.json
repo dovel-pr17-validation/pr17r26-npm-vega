@@ -1,0 +1,2124 @@
+{
+  "marktype": "group",
+  "name": "root",
+  "role": "frame",
+  "interactive": true,
+  "clip": false,
+  "items": [
+    {
+      "items": [
+        {
+          "marktype": "group",
+          "role": "axis",
+          "interactive": false,
+          "clip": false,
+          "items": [
+            {
+              "items": [
+                {
+                  "marktype": "rule",
+                  "role": "axis-grid",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": 0,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "y2": -600
+                    },
+                    {
+                      "x": 178,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "y2": -600
+                    },
+                    {
+                      "x": 356,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "y2": -600
+                    },
+                    {
+                      "x": 533,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "y2": -600
+                    },
+                    {
+                      "x": 711,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "y2": -600
+                    }
+                  ],
+                  "zindex": 0
+                }
+              ],
+              "x": 0.5,
+              "y": 600.5,
+              "orient": "bottom"
+            }
+          ],
+          "zindex": 0
+        },
+        {
+          "marktype": "group",
+          "role": "axis",
+          "interactive": false,
+          "clip": false,
+          "items": [
+            {
+              "items": [
+                {
+                  "marktype": "rule",
+                  "role": "axis-grid",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": 0,
+                      "y": 550,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "x2": 800
+                    },
+                    {
+                      "x": 0,
+                      "y": 450,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "x2": 800
+                    },
+                    {
+                      "x": 0,
+                      "y": 350,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "x2": 800
+                    },
+                    {
+                      "x": 0,
+                      "y": 250,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "x2": 800
+                    },
+                    {
+                      "x": 0,
+                      "y": 150,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "x2": 800
+                    },
+                    {
+                      "x": 0,
+                      "y": 50,
+                      "opacity": 1,
+                      "stroke": "#ddd",
+                      "strokeWidth": 1,
+                      "x2": 800
+                    }
+                  ],
+                  "zindex": 0
+                }
+              ],
+              "x": 0.5,
+              "y": 0.5,
+              "orient": "left"
+            }
+          ],
+          "zindex": 0
+        },
+        {
+          "marktype": "group",
+          "role": "axis",
+          "interactive": false,
+          "clip": false,
+          "items": [
+            {
+              "items": [
+                {
+                  "marktype": "rule",
+                  "role": "axis-tick",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": 0,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "y2": 5
+                    },
+                    {
+                      "x": 178,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "y2": 5
+                    },
+                    {
+                      "x": 356,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "y2": 5
+                    },
+                    {
+                      "x": 533,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "y2": 5
+                    },
+                    {
+                      "x": 711,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "y2": 5
+                    }
+                  ],
+                  "zindex": 0
+                },
+                {
+                  "marktype": "text",
+                  "role": "axis-label",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": 0,
+                      "y": 7,
+                      "align": "center",
+                      "baseline": "top",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "0",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    },
+                    {
+                      "x": 177.77777777777777,
+                      "y": 7,
+                      "align": "center",
+                      "baseline": "top",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "2",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    },
+                    {
+                      "x": 355.55555555555554,
+                      "y": 7,
+                      "align": "center",
+                      "baseline": "top",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "4",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    },
+                    {
+                      "x": 533.3333333333333,
+                      "y": 7,
+                      "align": "center",
+                      "baseline": "top",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "6",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    },
+                    {
+                      "x": 711.1111111111111,
+                      "y": 7,
+                      "align": "center",
+                      "baseline": "top",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "8",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    }
+                  ],
+                  "zindex": 0
+                },
+                {
+                  "marktype": "rule",
+                  "role": "axis-domain",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": 0,
+                      "y": 0,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "x2": 800
+                    }
+                  ],
+                  "zindex": 0
+                },
+                {
+                  "marktype": "text",
+                  "role": "axis-title",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": 400,
+                      "y": 21,
+                      "align": "center",
+                      "baseline": "top",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "Fertility",
+                      "angle": 0,
+                      "font": "sans-serif",
+                      "fontSize": 11,
+                      "fontWeight": "bold"
+                    }
+                  ],
+                  "zindex": 0
+                }
+              ],
+              "x": 0.5,
+              "y": 600.5,
+              "orient": "bottom"
+            }
+          ],
+          "zindex": 1
+        },
+        {
+          "marktype": "group",
+          "role": "axis",
+          "interactive": false,
+          "clip": false,
+          "items": [
+            {
+              "items": [
+                {
+                  "marktype": "rule",
+                  "role": "axis-tick",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": 0,
+                      "y": 550,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "x2": -5
+                    },
+                    {
+                      "x": 0,
+                      "y": 450,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "x2": -5
+                    },
+                    {
+                      "x": 0,
+                      "y": 350,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "x2": -5
+                    },
+                    {
+                      "x": 0,
+                      "y": 250,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "x2": -5
+                    },
+                    {
+                      "x": 0,
+                      "y": 150,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "x2": -5
+                    },
+                    {
+                      "x": 0,
+                      "y": 50,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "x2": -5
+                    }
+                  ],
+                  "zindex": 0
+                },
+                {
+                  "marktype": "text",
+                  "role": "axis-label",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": -7,
+                      "y": 550,
+                      "align": "right",
+                      "baseline": "middle",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "30",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    },
+                    {
+                      "x": -7,
+                      "y": 450,
+                      "align": "right",
+                      "baseline": "middle",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "40",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    },
+                    {
+                      "x": -7,
+                      "y": 349.99999999999994,
+                      "align": "right",
+                      "baseline": "middle",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "50",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    },
+                    {
+                      "x": -7,
+                      "y": 249.99999999999997,
+                      "align": "right",
+                      "baseline": "middle",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "60",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    },
+                    {
+                      "x": -7,
+                      "y": 150,
+                      "align": "right",
+                      "baseline": "middle",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "70",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    },
+                    {
+                      "x": -7,
+                      "y": 50.00000000000002,
+                      "align": "right",
+                      "baseline": "middle",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "80",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 10
+                    }
+                  ],
+                  "zindex": 0
+                },
+                {
+                  "marktype": "rule",
+                  "role": "axis-domain",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": 0,
+                      "y": 600,
+                      "opacity": 1,
+                      "stroke": "#888",
+                      "strokeWidth": 1,
+                      "y2": 0
+                    }
+                  ],
+                  "zindex": 0
+                },
+                {
+                  "marktype": "text",
+                  "role": "axis-title",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": -27,
+                      "y": 300,
+                      "align": "center",
+                      "baseline": "bottom",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "text": "Life Expectancy",
+                      "angle": -90,
+                      "font": "sans-serif",
+                      "fontSize": 11,
+                      "fontWeight": "bold"
+                    }
+                  ],
+                  "zindex": 0
+                }
+              ],
+              "x": 0.5,
+              "y": 0.5,
+              "orient": "left"
+            }
+          ],
+          "zindex": 1
+        },
+        {
+          "marktype": "text",
+          "role": "mark",
+          "interactive": true,
+          "clip": false,
+          "items": [
+            {
+              "x": 300,
+              "y": 300,
+              "fill": "grey",
+              "fillOpacity": 0.25,
+              "text": 1980,
+              "font": "sans-serif",
+              "fontSize": 100
+            }
+          ],
+          "zindex": 0
+        },
+        {
+          "marktype": "text",
+          "role": "mark",
+          "interactive": false,
+          "clip": false,
+          "items": [],
+          "zindex": 0
+        },
+        {
+          "marktype": "line",
+          "role": "mark",
+          "interactive": true,
+          "clip": false,
+          "items": [],
+          "zindex": 0
+        },
+        {
+          "marktype": "symbol",
+          "name": "point",
+          "role": "mark",
+          "interactive": true,
+          "clip": false,
+          "items": [
+            {
+              "x": 674.6666666666666,
+              "y": 413.2,
+              "fill": "#4c78a8",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 293.3333333333333,
+              "y": 147.7,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 168.88888888888889,
+              "y": 104.89999999999998,
+              "fill": "#e45756",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 146.66666666666666,
+              "y": 121.6,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 257.77777777777777,
+              "y": 163.79999999999995,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 561.7777777777778,
+              "y": 317.8,
+              "fill": "#4c78a8",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 177.77777777777777,
+              "y": 120.40000000000006,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 149.33333333333331,
+              "y": 116.7,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 486.2222222222222,
+              "y": 282.40000000000003,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 359.1111111111111,
+              "y": 222.6,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 154.66666666666666,
+              "y": 97.90000000000008,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 243.55555555555557,
+              "y": 155.60000000000005,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 243.55555555555557,
+              "y": 205.90000000000003,
+              "fill": "#e45756",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 343.1111111111111,
+              "y": 160.8,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 319.1111111111111,
+              "y": 103.19999999999996,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 170.66666666666666,
+              "y": 143.3,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 144.00000000000003,
+              "y": 114.30000000000007,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 382.2222222222222,
+              "y": 157.49999999999997,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 420.44444444444446,
+              "y": 179.89999999999998,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 496,
+              "y": 265.20000000000005,
+              "fill": "#54a24b",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 454.2222222222223,
+              "y": 211.89999999999998,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 144.88888888888889,
+              "y": 109.89999999999995,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 174.2222222222222,
+              "y": 103.19999999999996,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 207.11111111111111,
+              "y": 164.59999999999994,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 136.88888888888889,
+              "y": 117.39999999999992,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 206.22222222222223,
+              "y": 97.00000000000004,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 322.66666666666663,
+              "y": 156.89999999999998,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 502.22222222222223,
+              "y": 337.20000000000005,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 165.33333333333334,
+              "y": 101.50000000000009,
+              "fill": "#e45756",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 220.44444444444446,
+              "y": 85.10000000000002,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 424.88888888888886,
+              "y": 298.3,
+              "fill": "#4c78a8",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 399.11111111111114,
+              "y": 252.89999999999998,
+              "fill": "#e45756",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 584.8888888888889,
+              "y": 202.99999999999997,
+              "fill": "#54a24b",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 584,
+              "y": 204.89999999999995,
+              "fill": "#54a24b",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 284.44444444444446,
+              "y": 123.10000000000004,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 293.3333333333333,
+              "y": 108.40000000000005,
+              "fill": "#54a24b",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 145.77777777777777,
+              "y": 107.99999999999996,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 331.55555555555554,
+              "y": 111.80000000000008,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 155.55555555555557,
+              "y": 84.30000000000004,
+              "fill": "#e45756",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 675.5555555555555,
+              "y": 227.9,
+              "fill": "#eeca3b",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 358.2222222222223,
+              "y": 155.9,
+              "fill": "#54a24b",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 424.88888888888886,
+              "y": 188.1,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 142.22222222222223,
+              "y": 91.20000000000002,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 180.44444444444443,
+              "y": 116.29999999999998,
+              "fill": "#e45756",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 608.8888888888889,
+              "y": 309.4,
+              "fill": "#eeca3b",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 252.44444444444443,
+              "y": 209.50000000000003,
+              "fill": "#e45756",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 152.88888888888889,
+              "y": 90.40000000000003,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 598.2222222222223,
+              "y": 247.59999999999997,
+              "fill": "#4c78a8",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 448.00000000000006,
+              "y": 199.00000000000006,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 454.2222222222223,
+              "y": 192.60000000000005,
+              "fill": "#e45756",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 200,
+              "y": 144.59999999999994,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 199.11111111111111,
+              "y": 132.5,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 727.9999999999999,
+              "y": 365.69999999999993,
+              "fill": "#eeca3b",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 639.1111111111112,
+              "y": 189.39999999999998,
+              "fill": "#54a24b",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 424.88888888888886,
+              "y": 254.79999999999998,
+              "fill": "#eeca3b",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 241.77777777777777,
+              "y": 176.7,
+              "fill": "#e45756",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 196.44444444444446,
+              "y": 94.89999999999993,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 137.77777777777777,
+              "y": 90.29999999999998,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 393.7777777777777,
+              "y": 209.39999999999998,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 168,
+              "y": 112.09999999999991,
+              "fill": "#72b7b2",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 162.66666666666666,
+              "y": 110.40000000000003,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            },
+            {
+              "x": 373.3333333333333,
+              "y": 153.40000000000003,
+              "fill": "#f58518",
+              "fillOpacity": 0.5,
+              "size": 150
+            }
+          ],
+          "zindex": 0
+        },
+        {
+          "marktype": "text",
+          "role": "mark",
+          "interactive": false,
+          "clip": false,
+          "items": [
+            {
+              "x": 674.6666666666666,
+              "y": 406.2,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Afghanistan",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 293.3333333333333,
+              "y": 140.7,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Argentina",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 168.88888888888889,
+              "y": 97.89999999999998,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Australia",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 146.66666666666666,
+              "y": 114.6,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Austria",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 257.77777777777777,
+              "y": 156.79999999999995,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Bahamas",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 561.7777777777778,
+              "y": 310.8,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Bangladesh",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 177.77777777777777,
+              "y": 113.40000000000006,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Barbados",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 149.33333333333331,
+              "y": 109.7,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Belgium",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 486.2222222222222,
+              "y": 275.40000000000003,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Bolivia",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 359.1111111111111,
+              "y": 215.6,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Brazil",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 154.66666666666666,
+              "y": 90.90000000000008,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Canada",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 243.55555555555557,
+              "y": 148.60000000000005,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Chile",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 243.55555555555557,
+              "y": 198.90000000000003,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "China",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 343.1111111111111,
+              "y": 153.8,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Colombia",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 319.1111111111111,
+              "y": 96.19999999999996,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Costa Rica",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 170.66666666666666,
+              "y": 136.3,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Croatia",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 144.00000000000003,
+              "y": 107.30000000000007,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Cuba",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 382.2222222222222,
+              "y": 150.49999999999997,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Dominican Republic",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 420.44444444444446,
+              "y": 172.89999999999998,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Ecuador",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 496,
+              "y": 258.20000000000005,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Egypt",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 454.2222222222223,
+              "y": 204.89999999999998,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "El Salvador",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 144.88888888888889,
+              "y": 102.89999999999995,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Finland",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 174.2222222222222,
+              "y": 96.19999999999996,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "France",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 207.11111111111111,
+              "y": 157.59999999999994,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Georgia",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 136.88888888888889,
+              "y": 110.39999999999992,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Germany",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 206.22222222222223,
+              "y": 90.00000000000004,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Greece",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 322.66666666666663,
+              "y": 149.89999999999998,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Grenada",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 502.22222222222223,
+              "y": 330.20000000000005,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Haiti",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 165.33333333333334,
+              "y": 94.50000000000009,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Hong Kong, China",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 220.44444444444446,
+              "y": 78.10000000000002,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Iceland",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 424.88888888888886,
+              "y": 291.3,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "India",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 399.11111111111114,
+              "y": 245.89999999999998,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Indonesia",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 584.8888888888889,
+              "y": 195.99999999999997,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Iran",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 584,
+              "y": 197.89999999999995,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Iraq",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 284.44444444444446,
+              "y": 116.10000000000004,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Ireland",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 293.3333333333333,
+              "y": 101.40000000000005,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Israel",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 145.77777777777777,
+              "y": 100.99999999999996,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Italy",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 331.55555555555554,
+              "y": 104.80000000000008,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Jamaica",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 155.55555555555557,
+              "y": 77.30000000000004,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Japan",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 675.5555555555555,
+              "y": 220.9,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Kenya",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 358.2222222222223,
+              "y": 148.9,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Lebanon",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 424.88888888888886,
+              "y": 181.1,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Mexico",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 142.22222222222223,
+              "y": 84.20000000000002,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Netherlands",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 180.44444444444443,
+              "y": 109.29999999999998,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "New Zealand",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 608.8888888888889,
+              "y": 302.4,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Nigeria",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 252.44444444444443,
+              "y": 202.50000000000003,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "North Korea",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 152.88888888888889,
+              "y": 83.40000000000003,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Norway",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 598.2222222222223,
+              "y": 240.59999999999997,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Pakistan",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 448.00000000000006,
+              "y": 192.00000000000006,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Peru",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 454.2222222222223,
+              "y": 185.60000000000005,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Philippines",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 200,
+              "y": 137.59999999999994,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Poland",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 199.11111111111111,
+              "y": 125.5,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Portugal",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 727.9999999999999,
+              "y": 358.69999999999993,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Rwanda",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 639.1111111111112,
+              "y": 182.39999999999998,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Saudi Arabia",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 424.88888888888886,
+              "y": 247.79999999999998,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "South Africa",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 241.77777777777777,
+              "y": 169.7,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "South Korea",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 196.44444444444446,
+              "y": 87.89999999999993,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Spain",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 137.77777777777777,
+              "y": 83.29999999999998,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Switzerland",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 393.7777777777777,
+              "y": 202.39999999999998,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Turkey",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 168,
+              "y": 105.09999999999991,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "United Kingdom",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 162.66666666666666,
+              "y": 103.40000000000003,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "United States",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            },
+            {
+              "x": 373.3333333333333,
+              "y": 146.40000000000003,
+              "align": "center",
+              "baseline": "bottom",
+              "fill": "#333",
+              "fillOpacity": 0,
+              "text": "Venezuela",
+              "font": "sans-serif",
+              "fontSize": 14,
+              "fontWeight": "bold"
+            }
+          ],
+          "zindex": 0
+        },
+        {
+          "marktype": "group",
+          "role": "legend",
+          "interactive": false,
+          "clip": false,
+          "items": [
+            {
+              "items": [
+                {
+                  "marktype": "group",
+                  "role": "legend-entry",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "items": [
+                        {
+                          "marktype": "group",
+                          "role": "scope",
+                          "interactive": false,
+                          "clip": false,
+                          "items": [
+                            {
+                              "items": [
+                                {
+                                  "marktype": "symbol",
+                                  "role": "legend-symbol",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 6,
+                                      "y": 6,
+                                      "fill": "#4c78a8",
+                                      "fillOpacity": 0.5,
+                                      "opacity": 1,
+                                      "strokeWidth": 1.5,
+                                      "size": 100,
+                                      "shape": "circle"
+                                    }
+                                  ],
+                                  "zindex": 0
+                                },
+                                {
+                                  "marktype": "text",
+                                  "role": "legend-label",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 16,
+                                      "y": 6,
+                                      "align": "left",
+                                      "baseline": "middle",
+                                      "fill": "#000",
+                                      "opacity": 1,
+                                      "text": "South Asia",
+                                      "limit": 160,
+                                      "font": "sans-serif",
+                                      "fontSize": 10
+                                    }
+                                  ],
+                                  "zindex": 0
+                                }
+                              ],
+                              "x": 0,
+                              "y": 0,
+                              "width": 168,
+                              "height": 11,
+                              "opacity": 1
+                            },
+                            {
+                              "items": [
+                                {
+                                  "marktype": "symbol",
+                                  "role": "legend-symbol",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 6,
+                                      "y": 6,
+                                      "fill": "#f58518",
+                                      "fillOpacity": 0.5,
+                                      "opacity": 1,
+                                      "strokeWidth": 1.5,
+                                      "size": 100,
+                                      "shape": "circle"
+                                    }
+                                  ],
+                                  "zindex": 0
+                                },
+                                {
+                                  "marktype": "text",
+                                  "role": "legend-label",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 16,
+                                      "y": 6,
+                                      "align": "left",
+                                      "baseline": "middle",
+                                      "fill": "#000",
+                                      "opacity": 1,
+                                      "text": "America",
+                                      "limit": 160,
+                                      "font": "sans-serif",
+                                      "fontSize": 10
+                                    }
+                                  ],
+                                  "zindex": 0
+                                }
+                              ],
+                              "x": 0,
+                              "y": 13,
+                              "width": 168,
+                              "height": 11,
+                              "opacity": 1
+                            },
+                            {
+                              "items": [
+                                {
+                                  "marktype": "symbol",
+                                  "role": "legend-symbol",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 6,
+                                      "y": 6,
+                                      "fill": "#e45756",
+                                      "fillOpacity": 0.5,
+                                      "opacity": 1,
+                                      "strokeWidth": 1.5,
+                                      "size": 100,
+                                      "shape": "circle"
+                                    }
+                                  ],
+                                  "zindex": 0
+                                },
+                                {
+                                  "marktype": "text",
+                                  "role": "legend-label",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 16,
+                                      "y": 6,
+                                      "align": "left",
+                                      "baseline": "middle",
+                                      "fill": "#000",
+                                      "opacity": 1,
+                                      "text": "East Asia & Pacific",
+                                      "limit": 160,
+                                      "font": "sans-serif",
+                                      "fontSize": 10
+                                    }
+                                  ],
+                                  "zindex": 0
+                                }
+                              ],
+                              "x": 0,
+                              "y": 26,
+                              "width": 168,
+                              "height": 11,
+                              "opacity": 1
+                            },
+                            {
+                              "items": [
+                                {
+                                  "marktype": "symbol",
+                                  "role": "legend-symbol",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 6,
+                                      "y": 6,
+                                      "fill": "#72b7b2",
+                                      "fillOpacity": 0.5,
+                                      "opacity": 1,
+                                      "strokeWidth": 1.5,
+                                      "size": 100,
+                                      "shape": "circle"
+                                    }
+                                  ],
+                                  "zindex": 0
+                                },
+                                {
+                                  "marktype": "text",
+                                  "role": "legend-label",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 16,
+                                      "y": 6,
+                                      "align": "left",
+                                      "baseline": "middle",
+                                      "fill": "#000",
+                                      "opacity": 1,
+                                      "text": "Europe & Central Asia",
+                                      "limit": 160,
+                                      "font": "sans-serif",
+                                      "fontSize": 10
+                                    }
+                                  ],
+                                  "zindex": 0
+                                }
+                              ],
+                              "x": 0,
+                              "y": 39,
+                              "width": 168,
+                              "height": 11,
+                              "opacity": 1
+                            },
+                            {
+                              "items": [
+                                {
+                                  "marktype": "symbol",
+                                  "role": "legend-symbol",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 6,
+                                      "y": 6,
+                                      "fill": "#54a24b",
+                                      "fillOpacity": 0.5,
+                                      "opacity": 1,
+                                      "strokeWidth": 1.5,
+                                      "size": 100,
+                                      "shape": "circle"
+                                    }
+                                  ],
+                                  "zindex": 0
+                                },
+                                {
+                                  "marktype": "text",
+                                  "role": "legend-label",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 16,
+                                      "y": 6,
+                                      "align": "left",
+                                      "baseline": "middle",
+                                      "fill": "#000",
+                                      "opacity": 1,
+                                      "text": "Middle East & North Africa",
+                                      "limit": 160,
+                                      "font": "sans-serif",
+                                      "fontSize": 10
+                                    }
+                                  ],
+                                  "zindex": 0
+                                }
+                              ],
+                              "x": 0,
+                              "y": 52,
+                              "width": 168,
+                              "height": 11,
+                              "opacity": 1
+                            },
+                            {
+                              "items": [
+                                {
+                                  "marktype": "symbol",
+                                  "role": "legend-symbol",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 6,
+                                      "y": 6,
+                                      "fill": "#eeca3b",
+                                      "fillOpacity": 0.5,
+                                      "opacity": 1,
+                                      "strokeWidth": 1.5,
+                                      "size": 100,
+                                      "shape": "circle"
+                                    }
+                                  ],
+                                  "zindex": 0
+                                },
+                                {
+                                  "marktype": "text",
+                                  "role": "legend-label",
+                                  "interactive": false,
+                                  "clip": false,
+                                  "items": [
+                                    {
+                                      "x": 16,
+                                      "y": 6,
+                                      "align": "left",
+                                      "baseline": "middle",
+                                      "fill": "#000",
+                                      "opacity": 1,
+                                      "text": "Sub-Saharan Africa",
+                                      "limit": 160,
+                                      "font": "sans-serif",
+                                      "fontSize": 10
+                                    }
+                                  ],
+                                  "zindex": 0
+                                }
+                              ],
+                              "x": 0,
+                              "y": 65,
+                              "width": 168,
+                              "height": 11,
+                              "opacity": 1
+                            }
+                          ],
+                          "zindex": 0
+                        }
+                      ],
+                      "x": 0,
+                      "y": 16
+                    }
+                  ],
+                  "zindex": 0
+                },
+                {
+                  "marktype": "text",
+                  "role": "legend-title",
+                  "interactive": false,
+                  "clip": false,
+                  "items": [
+                    {
+                      "x": 0,
+                      "y": 0,
+                      "align": "left",
+                      "baseline": "top",
+                      "fill": "#000",
+                      "opacity": 1,
+                      "orient": "top",
+                      "text": "Region",
+                      "angle": 0,
+                      "limit": 180,
+                      "font": "sans-serif",
+                      "fontSize": 11,
+                      "fontWeight": "bold"
+                    }
+                  ],
+                  "zindex": 0
+                }
+              ],
+              "x": 818,
+              "y": 0,
+              "width": 168,
+              "height": 92,
+              "orient": "right"
+            }
+          ],
+          "zindex": 0
+        }
+      ],
+      "x": 0,
+      "y": 0,
+      "width": 800,
+      "height": 600
+    }
+  ],
+  "zindex": 0
+}

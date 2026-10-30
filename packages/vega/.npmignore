@@ -1,0 +1,10 @@
+*.sublime-*
+_site
+.sass-cache
+.jekyll-metadata
+rollup.js
+rollup-node.js
+schema-copy.js
+schema-deploy.sh
+docs/
+test/

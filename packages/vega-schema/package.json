@@ -1,0 +1,50 @@
+{
+  "name": "vega-schema",
+  "version": "6.4.0",
+  "description": "Generate the Vega JSON schema.",
+  "keywords": [
+    "vega",
+    "json",
+    "schema"
+  ],
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "author": {
+    "name": "Vega",
+    "url": "https://vega.github.io"
+  },
+  "exports": {
+    "default": "./build/vega-schema.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vega/vega.git"
+  },
+  "homepage": "https://github.com/vega/vega/tree/main/packages/vega-schema#readme",
+  "bugs": {
+    "url": "https://github.com/vega/vega/issues"
+  },
+  "scripts": {
+    "prebuild": "del-cli build",
+    "build": "rollup -c rollup.config.js --config-node",
+    "postbuild": "node schema > build/vega-schema.json",
+    "test": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "dependencies": {
+    "vega-scale": "^8.1.3"
+  },
+  "devDependencies": {
+    "vega-crossfilter": "5.1.3",
+    "vega-encode": "5.2.2",
+    "vega-force": "5.1.3",
+    "vega-geo": "5.1.3",
+    "vega-hierarchy": "5.1.3",
+    "vega-label": "2.1.3",
+    "vega-regression": "2.1.3",
+    "vega-transforms": "5.2.2",
+    "vega-view-transforms": "5.2.2",
+    "vega-voronoi": "5.1.3",
+    "vega-wordcloud": "5.1.3"
+  }
+}

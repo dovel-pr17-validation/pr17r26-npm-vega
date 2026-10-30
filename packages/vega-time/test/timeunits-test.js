@@ -1,0 +1,50 @@
+import tape from 'tape';
+import * as vega from '../index.js';
+
+tape('timeUnits standardizes time units', t => {
+  t.deepEqual(vega.timeUnits('year'), ['year']);
+  t.deepEqual(vega.timeUnits(['year']), ['year']);
+
+  t.deepEqual(vega.timeUnits(['year', 'month', 'date']), ['year', 'month', 'date']);
+  t.deepEqual(vega.timeUnits(['year', 'date', 'month']), ['year', 'month', 'date']);
+  t.deepEqual(vega.timeUnits(['date', 'month', 'year']), ['year', 'month', 'date']);
+
+  t.deepEqual(vega.timeUnits(['year', 'week', 'day']), ['year', 'week', 'day']);
+  t.deepEqual(vega.timeUnits(['year', 'day', 'week']), ['year', 'week', 'day']);
+  t.deepEqual(vega.timeUnits(['day', 'week', 'year']), ['year', 'week', 'day']);
+
+  t.deepEqual(vega.timeUnits(['year', 'isoweek', 'day']), ['year', 'isoweek', 'day']);
+  t.deepEqual(vega.timeUnits(['year', 'day', 'isoweek']), ['year', 'isoweek', 'day']);
+  t.deepEqual(vega.timeUnits(['day', 'isoweek', 'year']), ['year', 'isoweek', 'day']);
+
+  t.deepEqual(vega.timeUnits(['year', 'dayofyear']), ['year', 'dayofyear']);
+  t.deepEqual(vega.timeUnits(['dayofyear', 'year']), ['year', 'dayofyear']);
+
+  t.deepEqual(vega.timeUnits(['hours', 'minutes', 'seconds']), ['hours', 'minutes', 'seconds']);
+  t.deepEqual(vega.timeUnits(['hours', 'seconds', 'minutes']), ['hours', 'minutes', 'seconds']);
+  t.deepEqual(vega.timeUnits(['seconds', 'minutes', 'hours']), ['hours', 'minutes', 'seconds']);
+
+  t.throws(() => vega.timeUnits());
+  t.throws(() => vega.timeUnits([]));
+  t.throws(() => vega.timeUnits('foo'));
+  t.throws(() => vega.timeUnits(['foo']));
+  t.throws(() => vega.timeUnits(['quarter', 'week']));
+  t.throws(() => vega.timeUnits(['month', 'week']));
+  t.throws(() => vega.timeUnits(['quarter', 'day']));
+  t.throws(() => vega.timeUnits(['month', 'day']));
+  t.throws(() => vega.timeUnits(['quarter', 'dayofyear']));
+  t.throws(() => vega.timeUnits(['month', 'dayofyear']));
+  t.throws(() => vega.timeUnits(['date', 'day']));
+  t.throws(() => vega.timeUnits(['date', 'dayofyear']));
+  t.throws(() => vega.timeUnits(['day', 'dayofyear']));
+  t.throws(() => vega.timeUnits(['week', 'date']));
+  t.throws(() => vega.timeUnits(['week', 'dayofyear']));
+  t.throws(() => vega.timeUnits(['quarter', 'isoweek']));
+  t.throws(() => vega.timeUnits(['month', 'isoweek']));
+  t.throws(() => vega.timeUnits(['isoweek', 'date']));
+  t.throws(() => vega.timeUnits(['isoweek', 'dayofyear']));
+  t.throws(() => vega.timeUnits(['week', 'isoweek']));
+  t.throws(() => vega.timeUnits(['year', 'week', 'isoweek', 'day']));
+
+  t.end();
+});

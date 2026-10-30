@@ -1,0 +1,438 @@
+import tape from 'tape';
+import { field } from 'vega-util';
+import { Dataflow, changeset } from 'vega-dataflow';
+import { aggregate as Aggregate, collect as Collect } from '../index.js';
+
+tape('Aggregate aggregates tuples', t => {
+  const data = [
+    {k:'a', v:1}, {k:'b', v:3},
+    {k:'a', v:2}, {k:'b', v:4}
+  ];
+
+  var key = field('k'),
+      val = field('v'),
+      df = new Dataflow(),
+      col = df.add(Collect),
+      agg = df.add(Aggregate, {
+        groupby: [key],
+        fields: [val, val, val, val, val, val],
+        ops: ['exponential', 'count', 'sum', 'min', 'max', 'product'],
+        aggregate_params: [0.5],
+        pulse: col
+      }),
+      out = df.add(Collect, {pulse: agg});
+
+  // -- test adds
+  df.pulse(col, changeset().insert(data)).run();
+  let d = out.value;
+  t.equal(d.length, 2);
+  t.equal(d[0].k, 'a');
+  t.equal(d[0].count_v, 2);
+  t.equal(d[0].sum_v, 3);
+  t.equal(d[0].min_v, 1);
+  t.equal(d[0].max_v, 2);
+  t.equal(d[0].product_v, 2);
+  t.equal(d[0].exponential_v, 1.6666666666666667);
+  t.equal(d[1].k, 'b');
+  t.equal(d[1].count_v, 2);
+  t.equal(d[1].sum_v, 7);
+  t.equal(d[1].min_v, 3);
+  t.equal(d[1].max_v, 4);
+  t.equal(d[1].product_v, 12);
+  t.equal(d[1].exponential_v, 3.6666666666666665);
+
+  // -- test rems
+  df.pulse(col, changeset().remove(data.slice(0, 2))).run();
+  d = out.value;
+  t.equal(d.length, 2);
+  t.equal(d[0].k, 'a');
+  t.equal(d[0].count_v, 1);
+  t.equal(d[0].sum_v, 2);
+  t.equal(d[0].min_v, 2);
+  t.equal(d[0].max_v, 2);
+  t.equal(d[0].product_v, 2);
+  t.equal(d[1].k, 'b');
+  t.equal(d[1].count_v, 1);
+  t.equal(d[1].sum_v, 4);
+  t.equal(d[1].min_v, 4);
+  t.equal(d[1].max_v, 4);
+  t.equal(d[1].product_v, 4);
+
+  // -- test mods, no groupby change
+  df.pulse(col, changeset().modify(data[2], 'v', 3)).run();
+  d = out.value;
+  t.equal(d.length, 2);
+  t.equal(d[0].k, 'a');
+  t.equal(d[0].count_v, 1);
+  t.equal(d[0].sum_v, 3);
+  t.equal(d[0].min_v, 3);
+  t.equal(d[0].max_v, 3);
+  t.equal(d[0].product_v, 3);
+  t.equal(d[1].k, 'b');
+  t.equal(d[1].count_v, 1);
+  t.equal(d[1].sum_v, 4);
+  t.equal(d[1].min_v, 4);
+  t.equal(d[1].max_v, 4);
+  t.equal(d[1].product_v, 4);
+
+  // -- test mods, groupby change
+  df.pulse(col, changeset().modify(data[2], 'k', 'b')).run();
+  d = out.value;
+  t.equal(d.length, 1);
+  t.equal(d[0].k, 'b');
+  t.equal(d[0].count_v, 2);
+  t.equal(d[0].sum_v, 7);
+  t.equal(d[0].min_v, 3);
+  t.equal(d[0].max_v, 4);
+  t.equal(d[0].product_v, 12);
+
+  t.end();
+});
+
+tape('Aggregate handles count aggregates', t => {
+  const data = [
+    {foo:0, bar:1},
+    {foo:2, bar:3},
+    {foo:4, bar:5}
+  ];
+
+  var foo = field('foo'),
+      bar = field('bar'),
+      df, col, agg, out, d;
+
+  // counts only
+  df = new Dataflow();
+  col = df.add(Collect);
+  agg = df.add(Aggregate, {
+    fields: [null, foo, bar],
+    ops: ['count', 'count', 'count'],
+    pulse: col
+  });
+  out = df.add(Collect, {pulse: agg});
+
+  df.pulse(col, changeset().insert(data)).run();
+  d = out.value;
+  t.equal(d.length, 1);
+  t.equal(Object.keys(d[0]).length, 3); // outputs
+  t.equal(d[0].count, 3);
+  t.equal(d[0].count_foo, 3);
+  t.equal(d[0].count_bar, 3);
+
+  // multiple counts plus other measures
+  df = new Dataflow();
+  col = df.add(Collect);
+  agg = df.add(Aggregate, {
+    fields: [null, foo, bar, bar],
+    ops: ['count', 'sum', 'sum', 'count'],
+    pulse: col
+  });
+  out = df.add(Collect, {pulse: agg});
+
+  df.pulse(col, changeset().insert(data)).run();
+  d = out.value;
+  t.equal(d.length, 1);
+  t.equal(Object.keys(d[0]).length, 4); // outputs
+  t.equal(d[0].count, 3);
+  t.equal(d[0].sum_foo, 6);
+  t.equal(d[0].sum_bar, 9);
+  t.equal(d[0].count_bar, 3);
+
+  t.end();
+});
+
+tape('Aggregate properly handles empty aggregation cells', t => {
+  const data = [
+    {k:'a', v:1}, {k:'b', v:3},
+    {k:'a', v:2}, {k:'b', v:4}
+  ];
+
+  var key = field('k'),
+      val = field('v'),
+      df = new Dataflow(),
+      col = df.add(Collect),
+      agg = df.add(Aggregate, {
+        groupby: [key],
+        fields: [val, val, val, val, val],
+        ops: ['count', 'sum', 'min', 'max', 'product'],
+        pulse: col
+      }),
+      out = df.add(Collect, {pulse: agg});
+
+  // -- add data
+  df.pulse(col, changeset().insert(data)).run();
+  t.equal(out.value.length, 2);
+
+  // -- remove category 'b'
+  df.pulse(col, changeset()
+    .remove(d => d.k === 'b')).run();
+  t.equal(out.value.length, 1);
+
+  // -- modify tuple
+  df.pulse(col, changeset().modify(data[0], 'v', 2)).run();
+
+  const d = out.value;
+  t.equal(d.length, 1);
+  t.equal(d[0].k, 'a');
+  t.equal(d[0].count_v, 2);
+  t.equal(d[0].sum_v, 4);
+  t.equal(d[0].min_v, 2);
+  t.equal(d[0].max_v, 2);
+  t.equal(d[0].product_v, 4);
+
+  t.end();
+});
+
+tape('Aggregate handles distinct aggregates', t => {
+  const data = [
+    {foo:null},
+    {foo:null},
+    {foo:undefined},
+    {foo:undefined},
+    {foo:NaN},
+    {foo:NaN},
+    {foo:0},
+    {foo:0}
+  ];
+
+  var foo = field('foo'),
+      df, col, agg, out, d;
+
+  // counts only
+  df = new Dataflow();
+  col = df.add(Collect);
+  agg = df.add(Aggregate, {
+    fields: [foo],
+    ops: ['distinct'],
+    pulse: col
+  });
+  out = df.add(Collect, {pulse: agg});
+
+  df.pulse(col, changeset().insert(data)).run();
+  d = out.value;
+  t.equal(d.length, 1);
+  t.equal(d[0].distinct_foo, 4);
+
+  df.pulse(col, changeset().remove(data[0])).run();
+  d = out.value;
+  t.equal(d.length, 1);
+  t.equal(d[0].distinct_foo, 4);
+
+  df.pulse(col, changeset().remove(data[1])).run();
+  d = out.value;
+  t.equal(d.length, 1);
+  t.equal(d[0].distinct_foo, 3);
+
+  t.end();
+});
+
+tape('Aggregate handles cross-product', t => {
+  const data = [
+    {a: 0, b: 2},
+    {a: 1, b: 3}
+  ];
+
+  var a = field('a'),
+      b = field('b'),
+      df = new Dataflow(),
+      col = df.add(Collect),
+      agg = df.add(Aggregate, {
+        groupby: [a, b],
+        cross: true,
+        pulse: col
+      }),
+      out = df.add(Collect, {
+        sort: function(u, v) { return (u.a - v.a) || (u.b - v.b); },
+        pulse: agg
+      });
+
+  // -- test add
+  df.pulse(col, changeset().insert(data)).run();
+  let d = out.value;
+  t.equal(d.length, 4);
+  t.equal(d[0].a, 0);
+  t.equal(d[0].b, 2);
+  t.equal(d[0].count, 1);
+  t.equal(d[1].a, 0);
+  t.equal(d[1].b, 3);
+  t.equal(d[1].count, 0);
+  t.equal(d[2].a, 1);
+  t.equal(d[2].b, 2);
+  t.equal(d[2].count, 0);
+  t.equal(d[3].a, 1);
+  t.equal(d[3].b, 3);
+  t.equal(d[3].count, 1);
+
+  // -- test mod
+  df.pulse(col, changeset().modify(data[0], 'b', 4)).run();
+  d = out.value;
+  t.equal(d.length, 6);
+  t.equal(d[0].a, 0);
+  t.equal(d[0].b, 2);
+  t.equal(d[0].count, 0);
+  t.equal(d[1].a, 0);
+  t.equal(d[1].b, 3);
+  t.equal(d[1].count, 0);
+  t.equal(d[2].a, 0);
+  t.equal(d[2].b, 4);
+  t.equal(d[2].count, 1);
+  t.equal(d[3].a, 1);
+  t.equal(d[3].b, 2);
+  t.equal(d[3].count, 0);
+  t.equal(d[4].a, 1);
+  t.equal(d[4].b, 3);
+  t.equal(d[4].count, 1);
+  t.equal(d[5].a, 1);
+  t.equal(d[5].b, 4);
+  t.equal(d[5].count, 0);
+
+  // -- test rem
+  df.pulse(col, changeset().remove(data)).run();
+  d = out.value;
+  t.equal(d.length, 6);
+  t.equal(d[0].a, 0);
+  t.equal(d[0].b, 2);
+  t.equal(d[0].count, 0);
+  t.equal(d[1].a, 0);
+  t.equal(d[1].b, 3);
+  t.equal(d[1].count, 0);
+  t.equal(d[2].a, 0);
+  t.equal(d[2].b, 4);
+  t.equal(d[2].count, 0);
+  t.equal(d[3].a, 1);
+  t.equal(d[3].b, 2);
+  t.equal(d[3].count, 0);
+  t.equal(d[4].a, 1);
+  t.equal(d[4].b, 3);
+  t.equal(d[4].count, 0);
+  t.equal(d[5].a, 1);
+  t.equal(d[5].b, 4);
+  t.equal(d[5].count, 0);
+
+  t.end();
+});
+
+tape('Aggregate handles empty/invalid data', t => {
+  const ops = [
+    'count',
+    'missing',
+    'valid',
+    'sum',
+    'product',
+    'mean',
+    'variance',
+    'variancep',
+    'stdev',
+    'stdevp',
+    'stderr',
+    'min',
+    'max',
+    'median',
+    'exponential',
+    'exponentialb'
+  ];
+  const res = [4, 3, 0]; // higher indices 'undefined'
+
+  var v = field('v'),
+      df = new Dataflow(),
+      col = df.add(Collect),
+      agg = df.add(Aggregate, {
+        fields: ops.map(() => v),
+        ops: ops,
+        as: ops,
+        pulse: col
+      }),
+      out = df.add(Collect, {pulse: agg});
+
+  df.pulse(
+    col,
+    changeset().insert([
+      {v: NaN}, {v: null}, {v: undefined}, {v: ''}
+    ])
+  ).run();
+  const d = out.value[0];
+
+  ops.forEach((op, i) => {
+    t.equal(d[op], res[i], op);
+  });
+
+  t.end();
+});
+
+tape('Aggregate handles population variance and stdev', t => {
+  const data = [{v: 7}, {v: 3}];
+  const ops = ['variance', 'stdev', 'variancep', 'stdevp'];
+
+  var v = field('v'),
+      df = new Dataflow(),
+      col = df.add(Collect),
+      agg = df.add(Aggregate, {
+        fields: ops.map(() => v),
+        ops: ops,
+        as: ops,
+        pulse: col
+      }),
+      out = df.add(Collect, {pulse: agg});
+
+  df.pulse(col, changeset().insert(data.slice(0, 1))).run();
+  let d = out.value[0];
+  t.equal(d.variance, undefined);
+  t.equal(d.stdev, undefined);
+  t.equal(d.variancep, 0);
+  t.equal(d.stdevp, 0);
+
+  df.pulse(col, changeset().insert(data.slice(1))).run();
+  d = out.value[0];
+  t.equal(d.variance, 8);
+  t.equal(d.stdev, Math.sqrt(8));
+  t.equal(d.variancep, 4);
+  t.equal(d.stdevp, 2);
+
+  t.end();
+});
+
+tape('Aggregate handles streaming population variance and stdev', t => {
+  const data = [{v: 2.5}, {v: 7.1}, {v: 0.3}, {v: 9.9}];
+
+  var v = field('v'),
+      df = new Dataflow(),
+      col = df.add(Collect),
+      agg = df.add(Aggregate, {
+        fields: [v, v],
+        ops: ['variancep', 'stdevp'],
+        as: ['variancep', 'stdevp'],
+        pulse: col
+      }),
+      out = df.add(Collect, {pulse: agg});
+
+  df.pulse(col, changeset().insert(data)).run();
+  df.pulse(col, changeset().remove(data.slice(1))).run();
+  const d = out.value[0];
+  t.ok(d.variancep >= 0, 'variancep is non-negative');
+  t.equal(d.stdevp, 0);
+
+  t.end();
+});
+
+tape('Aggregate handles streaming sample variance, stdev and stderr', t => {
+  const data = [{v: 5}, {v: 100000.123}, {v: 5}, {v: -99999.456}];
+
+  var v = field('v'),
+      df = new Dataflow(),
+      col = df.add(Collect),
+      agg = df.add(Aggregate, {
+        fields: [v, v, v],
+        ops: ['variance', 'stdev', 'stderr'],
+        as: ['variance', 'stdev', 'stderr'],
+        pulse: col
+      }),
+      out = df.add(Collect, {pulse: agg});
+
+  df.pulse(col, changeset().insert(data)).run();
+  df.pulse(col, changeset().remove([data[1], data[3]])).run();
+  const d = out.value[0];
+  t.ok(d.variance >= 0, 'variance is non-negative');
+  t.equal(d.stdev, 0);
+  t.equal(d.stderr, 0);
+
+  t.end();
+});
